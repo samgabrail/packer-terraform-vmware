@@ -1,0 +1,3 @@
+terraform.*
+.terraform
+packer-vsphere-iso-windows/win2019.base/variables.json
