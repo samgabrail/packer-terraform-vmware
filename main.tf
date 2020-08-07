@@ -29,7 +29,7 @@ data "vsphere_network" "network" {
 }
 
 data "vsphere_virtual_machine" "template" {
-  name = "Win2019-Template-Base"
+  name = var.windows_template
   datacenter_id = data.vsphere_datacenter.dc.id
 }
 
@@ -52,16 +52,16 @@ resource "vsphere_virtual_machine" "vm" {
 
   disk {
     name = "machine.vmdk"
-    thin_provisioned = true
-    // eagerly_scrub = true
+    thin_provisioned = false
+    eagerly_scrub = true
     size = data.vsphere_virtual_machine.template.disks.0.size
   }
 
   disk {
     name = "machine_1.vmdk"
     unit_number = 1
-    thin_provisioned = true
-    // eagerly_scrub = true
+    thin_provisioned = false
+    eagerly_scrub = true
     size = data.vsphere_virtual_machine.template.disks.0.size
   }
   
