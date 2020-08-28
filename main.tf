@@ -70,7 +70,7 @@ resource "vsphere_virtual_machine" "vm" {
     
     customize {
       windows_options {
-        computer_name = "machineWin2016"
+        computer_name = "machine"
         workgroup     = "test"
         
       }

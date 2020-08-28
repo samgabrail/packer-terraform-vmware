@@ -7,3 +7,7 @@ variable "vsphere_server" {}
 variable "windows_template" {
     default = "Win2019-Template-Base-Thick"
 }
+
+variable "computer_name" {
+    default = "machine"
+}
