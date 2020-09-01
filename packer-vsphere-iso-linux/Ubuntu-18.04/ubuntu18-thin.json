@@ -18,8 +18,13 @@
 
       "convert_to_template": "true",
     
-      "network": "{{user `network`}}",
-      "network_card": "vmxnet3",
+
+      "network_adapters": [
+        {
+          "network": "{{user `network`}}",
+          "network_card": "vmxnet3"
+        }
+      ],
     
       "boot_order": "disk,cdrom",
   
@@ -33,12 +38,15 @@
       "RAM_reserve_all": true,
   
       "disk_controller_type": "pvscsi",
-      "disk_size": "{{user `vm-disk-size`}}",
-      "disk_thin_provisioned": true,
+      "storage": [
+        {
+          "disk_size": "{{user `vm-disk-size`}}",
+          "disk_thin_provisioned": false
+        }
+      ],
   
       "iso_urls": "{{user `iso-url`}}",
-      "iso_checksum": "{{user `iso-checksum`}}",
-      "iso_checksum_type": "{{user `iso-checksum-type`}}",
+      "iso_checksum": "{{user `iso-checksum-type`}}:{{user `iso-checksum`}}",
 
       "floppy_files": ["./preseed.cfg"],
       "boot_command": [
@@ -56,7 +64,7 @@
         " initrd=/install/initrd.gz",
         " priority=critical",
         " locale=en_US",
-        " file=/media/preseed_server.cfg",
+        " file=/media/preseed.cfg",
         "<enter>"
       ]
     }

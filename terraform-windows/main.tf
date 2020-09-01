@@ -1,5 +1,5 @@
 provider "vsphere" {
-  version = "1.21.1"
+  version = "1.23.0"
   vim_keep_alive = 30
   user           = var.vsphere_user
   password       = var.vsphere_password
@@ -34,13 +34,15 @@ data "vsphere_virtual_machine" "template" {
 }
 
 resource "vsphere_virtual_machine" "vm" {
-  name             = "machine"
+  count = var.vm-count
+
+  name             = "${var.vm-name}-${count.index + 1}"
   resource_pool_id = data.vsphere_compute_cluster.cluster.resource_pool_id
   datastore_id     = data.vsphere_datastore.datastore.id
  # host_system_id = "${data.vsphere_datacenter.dc.id}"
   
-  num_cpus = 2
-  memory   = 1024
+  num_cpus = var.vm-cpu
+  memory   = var.vm-ram
   guest_id = data.vsphere_virtual_machine.template.guest_id
   scsi_type = data.vsphere_virtual_machine.template.scsi_type
   wait_for_guest_net_timeout = -1
@@ -70,9 +72,8 @@ resource "vsphere_virtual_machine" "vm" {
     
     customize {
       windows_options {
-        computer_name = "machine"
+        computer_name = "node-${count.index + 1}"
         workgroup     = "test"
-        
       }
       network_interface {}
       timeout = 30

@@ -1,5 +1,12 @@
 # Packer templates for Linux using vSphere-ISO provider
 
+# How to use: #
+
+```script
+cd Ubuntu-18.04
+packer build -var-file=variables.json ubuntu18-thin.json
+```
+
 This repository contains **HashiCorp Packer** templates to deploy **Linux** distros in **VMware vSphere**. 
 
 # Content: #
