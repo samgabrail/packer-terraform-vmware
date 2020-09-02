@@ -10,7 +10,7 @@
     "vsphere-network": "VM Network",
     "vsphere-folder": "Templates",
 
-    "vm-name": "Win2019-Template-Base-Thick2",
+    "vm-name": "Win2019-Template-Base-Thick",
     "vm-cpu-num": "2",
     "vm-mem-size": "4096",
     "vm-disk-size": "40960",

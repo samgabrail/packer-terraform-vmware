@@ -72,7 +72,11 @@
   "provisioners": [
     {
       "type": "shell",
-      "inline": ["echo 'Packer Template Build -- Complete'"]
+      "inline": [
+        "sudo rm /etc/machine-id", 
+        "sudo touch /etc/machine-id",
+        "echo 'Packer Template Build -- Complete'"
+      ]
     }
   ]
 }

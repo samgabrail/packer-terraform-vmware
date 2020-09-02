@@ -57,6 +57,8 @@ resource "vsphere_virtual_machine" "vm" {
 
   disk {
     label = "${var.vm-name}-${count.index + 1}-disk"
+    thin_provisioned = false
+    eagerly_scrub = true
     size  = 25
   }
 
@@ -64,7 +66,7 @@ resource "vsphere_virtual_machine" "vm" {
     template_uuid = data.vsphere_virtual_machine.template.id
     customize {
       linux_options {
-        host_name = "node-${count.index + 1}"
+        host_name = "${var.vm-name}-${count.index + 1}"
         domain    = var.vm-domain
       }     
       network_interface {}
