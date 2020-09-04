@@ -74,13 +74,7 @@ resource "vsphere_virtual_machine" "master" {
         host_name = "${var.master-name}-${count.index + 1}"
         domain    = var.vm-domain
       }     
-      network_interface {
-        ipv4_address = "192.168.1.${90 + count.index}"
-        ipv4_netmask = 24
-      }
-
-      ipv4_gateway = "192.168.1.254"
-      dns_server_list = ["192.168.1.80","8.8.8.8"]
+      network_interface {}
       timeout = 30
     }
   }
@@ -116,13 +110,7 @@ resource "vsphere_virtual_machine" "worker" {
         host_name = "${var.worker-name}-${count.index + 1}"
         domain    = var.vm-domain
       }     
-      network_interface {
-        ipv4_address = "192.168.1.${93 + count.index}"
-        ipv4_netmask = 24
-      }
-
-      ipv4_gateway = "192.168.1.254"
-      dns_server_list = ["192.168.1.80","8.8.8.8"]
+      network_interface {}
       timeout = 30
     }
   }
