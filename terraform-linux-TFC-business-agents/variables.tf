@@ -33,7 +33,6 @@ variable "vsphere-cluster" {
   default     = ""
 }
 
-
 variable "vsphere-template-folder" {
   type        = string
   description = "Template folder"
