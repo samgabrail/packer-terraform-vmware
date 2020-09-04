@@ -115,3 +115,4 @@ resource "vsphere_virtual_machine" "worker" {
     }
   }
 }
+
