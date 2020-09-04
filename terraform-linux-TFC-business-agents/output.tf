@@ -11,3 +11,4 @@ output "worker_ips" {
         vm.name => vm.guest_ip_addresses[0]
   }
 }
+
