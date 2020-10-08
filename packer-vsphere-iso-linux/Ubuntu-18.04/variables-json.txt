@@ -1,0 +1,24 @@
+{
+  "vm-name": "Ubuntu-1804-Template",
+    
+  "vcenter-server":"192.168.x.x",
+  "vcenter-username":"administrator@vsphere.home",
+  "vcenter-password": "xxxxx",
+  
+  "datacenter": "Datacenter",
+  "datastore": "Datastore2_NonSSD",
+  "folder": "Templates",
+  "cluster": "Cluster01",
+  "network": "VM Network",
+  
+  "vm-cpu-num": "1",
+  "vm-mem-size": "1024",
+  "vm-disk-size": "10240",
+    
+  "ssh-username": "username",
+  "ssh-password": "pass",
+  
+  "iso-url": "http://cdimage.ubuntu.com/releases/18.04/release/ubuntu-18.04.5-server-amd64.iso",
+  "iso-checksum": "8c5fc24894394035402f66f3824beb7234b757dd2b5531379cb310cedfdf0996",
+  "iso-checksum-type": "sha256"
+}
