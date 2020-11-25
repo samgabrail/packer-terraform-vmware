@@ -2,6 +2,7 @@
 # Deploying VMware VM #
 # =================== #
 
+
 # Connect to VMware vSphere vCenter
 provider "vsphere" {
   version = "1.23.0"
