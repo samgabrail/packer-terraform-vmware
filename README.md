@@ -12,3 +12,6 @@ Here is his [github repo](https://github.com/guillermo-musumeci/packer-vsphere-i
 
 ## More instructions
 You can find more instructions in /packer-vsphere-iso-windows/README.md
+
+## Packer Version
+These have been tested with packer version: 1.6.6
