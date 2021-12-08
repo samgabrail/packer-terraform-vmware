@@ -1,0 +1,5 @@
+{
+  "vsphere-server":"192.168.x.x",
+  "vsphere-user":"administrator@vsphere.local",
+  "vsphere-password": "myvspherepassword"
+}

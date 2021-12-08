@@ -32,7 +32,7 @@ Tested with **VMware ESX 6.7** | User: Administrator | Password: S3cr3t0!
 
 ```script
 cd win2019.base
-packer build -var-file=variables.json win2019.baseThick.json
+packer build -var-file=variables.json win2019.baseThin.json
 ```
 
 # Credits: #

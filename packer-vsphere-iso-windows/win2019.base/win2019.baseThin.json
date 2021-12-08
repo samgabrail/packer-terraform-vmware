@@ -15,10 +15,10 @@
     "vm-mem-size": "4096",
     "vm-disk-size": "40960",
     "winadmin-password": "S3cr3t0!",
-    "os_iso_path": "[Datastore2_NonSSD] SourcePrograms/Windows/Windows_Server_2019_17763.737.190906-2324.rs5_release_svc_refresh_SERVER_EVAL_x64FRE_en-us_1.iso"
+    "os_iso_path": "[Datastore2_NonSSD] SourcePrograms/Windows/Windows_Server_2019_2021_12_07_17763.737.190906-2324.rs5_release_svc_refresh_SERVER_EVAL_x64FRE_en-us_1.iso"
     },
   
-    "sensitive-variables": ["vsphere_password", "winadmin_password"],
+    "sensitive-variables": ["vsphere-password", "winadmin-password"],
     
     "builders": [
       {
