@@ -1,5 +1,5 @@
 {
-  "vm-name": "Ubuntu-1804-Template",
+  "vm-name": "Ubuntu-1604-Template",
     
   "vcenter-server":"192.168.x.x",
   "vcenter-username":"administrator@vsphere.home",
@@ -18,7 +18,7 @@
   "ssh-username": "username",
   "ssh-password": "xxxx",
   
-  "iso-url": "http://cdimage.ubuntu.com/releases/18.04/release/ubuntu-18.04.5-server-amd64.iso",
-  "iso-checksum": "8c5fc24894394035402f66f3824beb7234b757dd2b5531379cb310cedfdf0996",
+  "iso-url": "http://releases.ubuntu.com/16.04/ubuntu-16.04.7-server-amd64.iso",
+  "iso-checksum": "b23488689e16cad7a269eb2d3a3bf725d3457ee6b0868e00c8762d3816e25848",
   "iso-checksum-type": "sha256"
 }
